@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="MeasurementBuffer" Id="{1650884d-214c-4b9b-a209-9988b5b3841b}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK MeasurementBuffer
+VAR
+	MemRingBuffer : FB_MemRingBuffer;
+	BufferArray : ARRAY[0..GVL.MAX_BUFFER_SIZE] OF BYTE;
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="AddMeasurement" Id="{e38050eb-d64a-4f20-af81-a387013f37cc}">
+      <Declaration><![CDATA[METHOD AddMeasurement
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="MeasurementBuffer">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="MeasurementBuffer.AddMeasurement">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

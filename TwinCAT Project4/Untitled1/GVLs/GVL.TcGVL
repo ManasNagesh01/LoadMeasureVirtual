@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <GVL Name="GVL" Id="{fb042e5f-6d40-4897-bee7-12b30b60ce3d}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	OperationStart AT %I* : BOOL  ;
+	OperationStop AT %I* : BOOL ;
+	OperationNext AT %I* : BOOL ;
+ 
+	LoadMeasurementStart AT %Q* : BOOL;
+	LoadMeasurementWait AT %Q* : BOOL;
+	LoadMeasurementStop AT %Q* : BOOL; 
+	 
+END_VAR		
+
+VAR_GLOBAL CONSTANT
+	MAX_BUFFER_SIZE : UDINT := 1000	;
+	HighestForceValueBufferSize : INT := 10; 
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
